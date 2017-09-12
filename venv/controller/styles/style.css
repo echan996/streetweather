@@ -1,0 +1,108 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400);
+body {
+  background-color:#fff;
+  -webkit-font-smoothing: antialiased;
+  font: normal 14px Roboto,arial,sans-serif;
+}
+
+.container {
+  width: 100%;
+  min-height: 100%;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0 auto 0 auto;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.form-login {
+  padding-top: 20%;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 15px;
+  border-color:#d2d2d2;
+  border-width: 5px;
+}
+header, footer {
+  padding: 1em;
+  color: white;
+  background-color: #1686C8;
+  clear: left;
+  text-align: center;
+}
+header{
+  min-height: 10%;
+}
+footer{
+  min-height: 5%;
+}
+
+nav {
+  float: left;
+  width: 25%;
+  margin: 0;
+  padding: 2em;
+  padding-top: 5%
+  min-height:85%;
+}
+html{
+    /* Height and width fallback for older browsers. */
+    min-height: 100%;
+    min-width: 100%;
+
+    /* Set the height to match that of the viewport. */
+    min-height: 100vh;
+
+    /* Set the width to match that of the viewport. */
+    min-width: 100vw;
+
+    /* Remove any browser-default margins. */
+    margin: 0;
+}
+body{
+    min-height: 100%;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+   
+nav ul a {
+  text-decoration: none;
+}
+  
+article {
+  border-left: 1px solid grey;
+  margin-left: 0px;
+  padding: 4em;
+  overflow: hidden;
+  min-height:85%
+}
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+  background-color: #000000;
+  border-color: #1686C8;
+  background: #1686C8;
+  background-image: none;
+}
+
+.form-control {
+  border-radius: 10px;
+}
+  
+.wrapper {
+  text-align: center;
+}
+
+input{
+	margin-top: 20px;
+}
+label{
+	horizontal-align: left;
+}
