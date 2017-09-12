@@ -1,3 +1,5 @@
+#!/bin/bash
+
 if  [[ "$OSTYPE"=="darwin"* ]]; then
 	#mac installs
 	brew install python
