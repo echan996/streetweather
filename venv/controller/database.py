@@ -4,3 +4,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, create_session
 Session  = sessionmaker(bind = db.engine, autoflush=False)
 session = Session()
+
+session.add(db.Location(location_name="Londelbomble"))
+session.commit()
+print session.query(db.Location).first()

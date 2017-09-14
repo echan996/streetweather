@@ -1,6 +1,6 @@
 import os
 import sys
-from sqlalchemy import Column, ForeignKey, Integer, String, Boolean
+from sqlalchemy import Column, ForeignKey, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 from sqlalchemy import create_engine
@@ -15,7 +15,7 @@ class Weather(Base):
     humidity = Column(Integer, nullable=False)
     wind = Column(Integer, nullable=False)
     date = Column(Date, nullable=False)"""
-    location_id = Column(Integer, ForeignKey('location.id'), nullable=False)
+    location_id = Column(Integer, nullable=False, ForeignKey('location.id'))
 
 
 class Clothes(Base):
@@ -32,7 +32,7 @@ class User(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
     username = Column(String(20), nullable=False)
     password = Column(String(20), nullable=False)
-    gender = Column(Integer, nullable=False)
+    gender = Column(Bit(2), nullable=False)
     location_id = Column(Integer, ForeignKey('location.id'), nullable=False)
 
 class Location(Base):
@@ -44,12 +44,12 @@ class User_Clothes_Joiner(Base):
     __tablename__ = 'user_clothes_joiner'
     id = Column(Integer, primary_key=True, autoincrement=True)
     user_id = Column(Integer, ForeignKey('user.id'), nullable=False)
-    clothing_id = Column(Integer, ForeignKey('clothes.id'), nullable=False)
+    clothing_id = Column(Integer, ForeignKey('clothing.id'), nullable=False)
 
 class History(Base):
     __tablename__ = 'history'
-    id = Column(Integer, primary_key=True, autoincrement=True)
-    user_id = Column(Integer, ForeignKey('user.id'), nullable=False)
+    id = Column(Integer, primary_key=True, autoincrement=Trune)
+    user_id = Column(Integer, ForeignKey(user.id), nullable=False)
     preference = Column(Boolean, nullable=False)
 	# some way of representing the clothing set. idk if sqlite supports lists.
 
